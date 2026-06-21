@@ -10,3 +10,5 @@ git config --global user.name
 git config --global user.email
 git commit -m <message>
 git push
+git status -s
+git status --short
