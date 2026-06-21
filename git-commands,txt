@@ -1,0 +1,12 @@
+git init
+git status
+git clone
+git add <files>
+git status
+git -v
+git --version
+git config --list --show-origin
+git config --global user.name
+git config --global user.email
+git commit -m <message>
+git push
