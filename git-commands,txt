@@ -13,3 +13,8 @@ git push
 git status -s
 git status --short
 git commit -a -m <msg>
+git diff <src> <dst>
+git mv <srcname> <new name>
+git rm <filename>
+git restore --staged <filename>
+git restore <filename>
