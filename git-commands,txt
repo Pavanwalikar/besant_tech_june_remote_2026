@@ -18,3 +18,4 @@ git mv <srcname> <new name>
 git rm <filename>
 git restore --staged <filename>
 git restore <filename>
+git show <commitname>
