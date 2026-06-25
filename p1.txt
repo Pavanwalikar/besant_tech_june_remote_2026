@@ -1,7 +1,0 @@
-testing server
-testing server2
-aading 3rd line
-adding 4th line
-aading 5th line in p1.txt
-adding 6th line in p1.txt
-add 7th line
