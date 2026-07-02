@@ -1,1 +1,2 @@
 fist line in demo.txt
+second line in demo.txt
