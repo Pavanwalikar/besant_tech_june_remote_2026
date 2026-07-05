@@ -1,0 +1,2 @@
+adding 3rd line in file.txt
+adding 4th line in file.txt
