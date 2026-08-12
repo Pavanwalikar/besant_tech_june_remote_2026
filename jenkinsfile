@@ -1,0 +1,47 @@
+pipeline{
+    agent any
+    stages{
+        stage("1.stage"){
+            steps{
+                echo "this is stage 1"
+                echo "its for testing purpose"
+            }
+        }
+
+        stage("2.stage"){
+            steps{
+                echo "this is stage 2"
+                echo "its for testing purpose"
+                sh "df -h"
+
+            }
+        }
+
+        stage("3.stage"){
+            steps{
+                echo "this is stage 3"
+                echo "its for testing purpose"
+                sh "free -m"
+            }
+        }
+
+        stage("4.stage"){
+            steps{
+                echo "this is stage 4"
+                echo "its for testing purpose"
+                sh "ps -auxx | grep jenkins"
+            }
+        }
+
+        stage("5.stage"){
+            steps{
+                echo "this is stage 5"
+                echo "its for testing purpose"
+                sh "date"
+                sh "iostat"
+                sh "ls -al /var/log/"
+                sh "ping google.com"
+            }    
+        }
+    }
+}
