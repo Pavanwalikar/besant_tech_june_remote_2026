@@ -1,0 +1,28 @@
+node{
+    stage("1.install packages")
+    sh "apt-get install -y git docker.io"
+    
+    stage("2.restart the services")
+    sh "sudo systemctl status docker"
+    sh "sudo systemctl restart docker"
+    
+    stage("3.create file and folder")
+    sh "mkdir -p test"
+    sh "touch test/text.txt"
+    
+    stage("4.varify the output")
+    sh "docker pull ubuntu"
+    sh "docker images"
+    
+    stage("5.create containers")
+    sh "docker run -dit --name my-container ubuntu"
+    sh "docker ps -a"
+    sh "docker ps"
+    
+    stage("6.clean-up")
+    sh "docker rm my-container --force"
+    sh "ps -a"
+    sh "docker rmi ubuntu"
+    sh "docker images"
+    
+}
