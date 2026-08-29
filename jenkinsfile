@@ -1,0 +1,42 @@
+node{
+    
+        stage ("stage.1"){
+            echo "installing packages"
+            sh "apt-get install docker.io -y"
+        }
+        
+        stage("stage.2"){
+            echo "its about services"
+            sh "systemctl status docker"
+            sh "service docker restart"
+        }
+        
+        stage("stage.3"){
+            echo "pulling image"
+            sh "docker image ls"
+            sh "docker pull ubuntu"
+            sh "docker image ls"
+            
+        }
+        
+        stage("stage.4"){
+            echo "creating container"
+            sh "docker run -t -id --name docker-cont1.1 ubuntu"
+            sh "docker ps -a"
+            
+        }
+        
+        stage("stage.5"){
+            echo "removing everything image / container"
+            sh 'docker rm -f $(docker ps -aq)'
+            sh "docker rmi ubuntu"
+            
+        }
+        
+        stage("stage.6"){
+            echo "varify docker image and cotainer"
+            sh "docker image ls"
+            sh "docker ps -a"
+        }
+    
+}
