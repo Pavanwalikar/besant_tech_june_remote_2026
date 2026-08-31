@@ -1,4 +1,4 @@
-node{
+node('slave-2'){
     
         stage ("stage.1"){
             echo "installing packages"
